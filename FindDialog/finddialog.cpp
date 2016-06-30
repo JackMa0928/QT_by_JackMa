@@ -13,7 +13,7 @@ FindDialog::FindDialog(QWidget *parent) :QDialog(parent)
 	backwardCheckBox = new QCheckBox(tr("Search &backward"));
 	findButton = new QPushButton(tr("&Find"));
 	findButton->setDefault(true);
-	findButton->setEnabled(true);
+	findButton->setEnabled(false);
 	closeButton = new QPushButton(tr("Close"));
 	connect(lineEdit, SIGNAL(textChanged(const QString&)), this, SLOT(enableFindButton(const QString&)));
 	connect(findButton, SIGNAL(clicked()), this, SLOT(findClicked()));
